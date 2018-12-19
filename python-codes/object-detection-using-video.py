@@ -1,7 +1,10 @@
+'''
+This code is used to perform object-detection in video and return a video output with detections. The object detection is done with caffe's model and deploy file and with cv2's DNN moodule. 
+'''
 
 import os
-import numpy as np
 import cv2
+import numpy as np
 
 
 CLASSES = ["background", "car", "bus", "motorcycle" , "bicycle", "truck"] # Modify the class labels if necessary
@@ -13,7 +16,7 @@ print("[INFO] loading model...")
 COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 net = cv2.dnn.readNetFromCaffe(prototxt, model)
 
-vs = cv2.VideoCapture("/home/vkchcp0013/Documents/Helpful-codes/video1.avi") # Upload the video input here
+vs = cv2.VideoCapture("/home/vkchcp0013/Documents/Helpful-codes/video.avi") # Upload the video input here
 
 while(vs.isOpened()):
   	ret, frame = vs.read()
