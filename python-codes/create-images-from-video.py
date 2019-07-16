@@ -4,8 +4,8 @@ This code is to convert video to images
 
 import cv2
 
-vs = cv2.VideoCapture("/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/siva/object-detection-deep-learning/test-originals/my_video-7.mkv") # Enter the video here
-image_result = '/home/vkchcp0013/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/just-new/siva-yesterday/video/images' # Enter the result image location here
+vs = cv2.VideoCapture("/media/my_video-7.mkv") # Enter the video here
+image_result = '/media/images' # Enter the result image location here
 
 file_count = 1
 
