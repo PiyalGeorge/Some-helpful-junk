@@ -26,7 +26,7 @@ def load_annotations(filepath):
                 annotations.append(annotation)
     return annotations
 
-annotation_detail = load_annotations("/media/vkchcp0013/mstu_hpat/MSTU_HPAT/Image-data/validation/validation-annotations-bbox.csv")
+annotation_detail = load_annotations("/media/Image-data/validation/validation-annotations-bbox.csv")
 
 print("Size of annotations",len(annotation_detail))
 
