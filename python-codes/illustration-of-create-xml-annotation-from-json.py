@@ -16,18 +16,18 @@ def load_annotations(filepath):
             image_id= item['name']
             filename = os.path.splitext(image_id)[0]
             labels = item['labels']
-            source_train = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/Images/100k/train/"+image_id
-            source_test = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/Images/100k/test/"+image_id
-            source_val = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/Images/100k/val/"+image_id
+            source_train = "/media/downloads/vehicle-dataset/Images/100k/train/"+image_id
+            source_test = "/media/downloads/vehicle-dataset/Images/100k/test/"+image_id
+            source_val = "/media/downloads/vehicle-dataset/Images/100k/val/"+image_id
             
             if os.path.isfile(source_train):
-                new_label_file = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/labels/train/{}.xml".format(filename)
+                new_label_file = "/media/downloads/vehicle-dataset/labels/train/{}.xml".format(filename)
                 source = source_train
             elif os.path.isfile(source_test):
-                new_label_file = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/labels/test/{}.xml".format(filename)
+                new_label_file = "/media/downloads/vehicle-dataset/labels/test/{}.xml".format(filename)
                 source = source_test
             elif os.path.isfile(source_val):
-                new_label_file = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/vehicle-dataset/labels/val/{}.xml".format(filename)
+                new_label_file = "/media/downloads/vehicle-dataset/labels/val/{}.xml".format(filename)
                 source = source_val
             else:
                 source = source_train
@@ -100,7 +100,7 @@ def load_annotations(filepath):
 
 #Format be like:- [{imageid:[{classid ,xmin, ymin, xmax, ymax, confidence}]}, {imageid:[{classid ,xmin, ymin, xmax, ymax, confidence}]}]
     
-annotation_detail = load_annotations("/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/downloads/labels/bdd100k_labels_images_train.json")
+annotation_detail = load_annotations("/media/downloads/labels/bdd100k_labels_images_train.json")
 
 print("Got all Annotations")
 if annotation_detail is True:
