@@ -8,8 +8,8 @@ import os
 
 def move_over(src_dir, dest_dir):
     fileList = os.listdir(src_dir)
-    src_img_dir = '/home/vkchcp0013/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/open-images-car-bus-motorcycle-bicycle-truck-zip/Images'  # Source of images
-    dest_img_dir = '/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/open-images-2000-each/2000-set/2000-truck-images' # Destination of images
+    src_img_dir = '/home/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/open-images-car-bus-motorcycle-bicycle-truck-zip/Images'  # Source of images
+    dest_img_dir = '/media/new-dataset/open-images-2000-each/2000-set/2000-truck-images' # Destination of images
     counter = 0
     for count, i in enumerate(fileList):
         print("files executed:", count)
@@ -23,8 +23,8 @@ def move_over(src_dir, dest_dir):
 #             shutil.copy(check, dest_img_dir)
             counter = counter+1
 
-dest_dir = '/home/vkchcp0013/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/small-and-big-images-copy/exact-labels' # Destination of xml files(not necessary, all the time)
-src_dir = '/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/open-images-2000-each/2000-set/2000-truck'  # Source of xml files
+dest_dir = '/home/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/small-and-big-images-copy/exact-labels' # Destination of xml files(not necessary, all the time)
+src_dir = '/media/new-dataset/open-images-2000-each/2000-set/2000-truck'  # Source of xml files
 
 move_over(src_dir, dest_dir)
 
