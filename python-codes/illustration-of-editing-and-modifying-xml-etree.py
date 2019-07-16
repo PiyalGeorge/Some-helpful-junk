@@ -5,7 +5,7 @@ This code is used to edit and modify the xml files using Element-tree
 import os
 import xml.etree.ElementTree
 
-src = '/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/Image-data/Image-dataset/wanted/copy/bicycle/bicycle-labels'
+src = '/media/Image-data/Image-dataset/wanted/copy/bicycle/bicycle-labels'
 fileList = os.listdir(src)
 
 for count, eachfile in enumerate(fileList):
@@ -22,5 +22,5 @@ for count, eachfile in enumerate(fileList):
         else:
             pass
      
-    element.write('/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/Image-data/Image-dataset/wanted/copy/bicycle/refined-bicycle-labels/'+eachfile)
+    element.write('/media/Image-data/Image-dataset/wanted/copy/bicycle/refined-bicycle-labels/'+eachfile)
 
