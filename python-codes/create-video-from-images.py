@@ -16,13 +16,13 @@ fps=30
 size=(960, 480)  # Adjust this according to your width and height of the image
 is_color=True
 
-result_dir = '/home/vkchcp0013/Videos/wow' # Video location folder
+result_dir = '/home/Videos' # Video location folder
 
 output_video = result_dir+'/output-video.avi'
 
 video = cv2.VideoWriter(output_video, fourcc, float(fps), size, is_color)
 
-src = '/home/vkchcp0013/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/just-new/siva-yesterday/video/images' # Image location folder
+src = '/home/images' # Image location folder
 
 list_img = os.listdir(src)
 
