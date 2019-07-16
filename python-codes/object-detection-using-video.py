@@ -1,5 +1,5 @@
 '''
-This code is used to perform object-detection in video and return a video output with detections. The object detection is done with caffe's model and deploy file and with cv2's DNN moodule. 
+This code is used to perform object-detection in video and return a video output with detections. The object detection is done with caffe's model and deploy file and with cv2's DNN module. 
 '''
 
 import os
@@ -9,14 +9,14 @@ import numpy as np
 
 CLASSES = ["background", "car", "bus", "motorcycle" , "bicycle", "truck"] # Modify the class labels if necessary
 
-prototxt = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/siva/object-detection-deep-learning/models/open-images-6-classes/MobileNetSSD_deploy.prototxt.txt" # Enter the prototxt ending with .txt format
-model = "/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/siva/object-detection-deep-learning/models/open-images-6-classes/MobileNetSSD_deploy.caffemodel" # Enter the caffemodel
+prototxt = "/media/object-detection-deep-learning/models/open-images-6-classes/MobileNetSSD_deploy.prototxt.txt" # Enter the prototxt ending with .txt format
+model = "/media/object-detection-deep-learning/models/open-images-6-classes/MobileNetSSD_deploy.caffemodel" # Enter the caffemodel
 
 print("[INFO] loading model...")
 COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 net = cv2.dnn.readNetFromCaffe(prototxt, model)
 
-vs = cv2.VideoCapture("/home/vkchcp0013/Documents/Helpful-codes/video.avi") # Upload the video input here
+vs = cv2.VideoCapture("/home/Documents/Helpful-codes/video.avi") # Upload the video input here
 
 while(vs.isOpened()):
   	ret, frame = vs.read()
@@ -42,7 +42,7 @@ while(vs.isOpened()):
   	ret, frame = vs.read()
   	if ret == True:
 		image = frame.copy()
-		#image = cv2.imread('/home/vkchcp0013/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/Images/10.jpg') # Input the image input here if testing with single image 
+		#image = cv2.imread('/home/data/ssd-own-data-original/kitti-ssd/MyDataset/new-created/Images/10.jpg') # Input the image input here if testing with single image 
 		(h, w) = image.shape[:2]
 		blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
 
