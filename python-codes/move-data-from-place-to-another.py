@@ -1,5 +1,5 @@
 '''
-This file is used to move files from one folder to another
+This code is used to move files from one folder to another
 '''
 
 import shutil
@@ -16,8 +16,8 @@ def move_over(src_dir, dest_dir):
         #shutil.move(src, dest)
 
 
-dest_dir = '/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/images/destiny'
-src_dir = '/media/vkchcp0013/mstu_hpat/ZFGG_PRSC/new-dataset/images/src'   
+dest_dir = '/media/new-dataset/images/destiny'
+src_dir = '/media/new-dataset/images/src'   
 
 move_over(src_dir, dest_dir)
 
